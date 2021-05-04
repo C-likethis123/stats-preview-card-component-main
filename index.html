@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
+  <title>Frontend Mentor | Stats preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    body {
+      background-color: hsl(233, 47%, 7%);
+      color: hsl(0, 0%, 100%);
+      font-family: 'Lexend Deca';
+    }
+
+    .page {
+      display: grid;
+      grid: auto auto / 1fr 1fr;
+      padding: 15vh;
+      height: calc(100% - 15vh);
+    }
+
+    .pic {
+      background-image: linear-gradient(hsla(277, 64%, 61%, 0.6), hsla(277, 64%, 61%, 0.6)), url("images/image-header-desktop.jpg");
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 0px 10px 10px 0px;
+    }
+
+    .contents {
+      background-color: hsl(244, 38%, 16%);
+      padding: 10vh;
+      display: grid;
+      grid-gap: 20px;
+      grid-template-rows: 0.5fr 1.2fr 0.5fr;
+      border-radius: 10px 0px 0px 10px;
+    }
+
+    .stats-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 20px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .page {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        grid-template-rows: auto / span 2;
+        padding: 10vh;
+      }
+
+      .pic {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        min-height: 300px;
+        border-radius: 10px 10px 0px 0px;
+      }
+
+      .contents {
+        grid-row-start: 2;
+        grid-row-end: 5;
+        /* padding: 5vh; */
+        grid-template-rows: 0.5fr 0.5fr 1fr;
+        border-radius: 0px 0px 10px 10px;
+      }
+
+      .stats-group {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr 1fr;
+        text-align: center;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .page {
+        padding: 5vh;
+      }
+
+      .contents {
+        padding: 5vh;
+      }
+    }
+
+    h1 {
+      font-family: 'Inter', 'san-serif';
+      font-weight: 700;
+      font-size: 2rem;
+      line-height: 2.5rem;
+    }
+
+    #highlight {
+      color: hsl(277, 64%, 61%);
+    }
+
+    .description {
+      font-size: 0.9375rem;
+      line-height: 1.5rem;
+      color: hsla(0, 0%, 100%, 0.75);
+    }
+
+    .stats {
+      color: hsla(0, 0%, 100%, 0.6);
+      font-family: 'Lexend Deca', 'san-serif';
+      letter-spacing: 0.09375rem;
+    }
+
+    .stats-num {
+      font-size: 1.875rem;
+      font-weight: 700;
+      font-family: 'Inter';
+      color: hsl(0, 0%, 100%);
+      letter-spacing: 0rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+    <div class="contents">
+      <h1>Get <span id="highlight">insights</span> that help your business grow.</h1>
+
+      <p class="description">
+        Discover the benefits of data analytics and make better decisions regarding revenue, customer
+        experience, and overall efficiency.
+      </p>
+
+      <div class="stats-group">
+        <div class="stats">
+          <div class="stats-num">10k+</div> COMPANIES
+        </div>
+        <div class="stats">
+          <div class="stats-num">314</div> TEMPLATES
+        </div>
+        <div class="stats">
+          <div class="stats-num">12M+</div> QUERIES
+        </div>
+      </div>
+    </div>
+    <div class="pic"></div>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+
+</html>
